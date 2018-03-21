@@ -41,9 +41,9 @@ public class QuitListener implements Listener {
 
 				LobbyState ls = (LobbyState) GameStateManager.getGameState();
 
-				Bukkit.broadcastMessage("§4[§c-§4] §eDer Spieler §b" + PlayerChatColor.getColorName(player)
-						+ " §ehat den Server verlassen" + " §c[§6" + Var.INGAME.size() + " §c/§6" + Game.MAXPLAYER()
-						+ "§c]");
+				Bukkit.broadcastMessage("Â§4[Â§c-Â§4] Â§eDer Spieler Â§b" + PlayerChatColor.getColorName(player)
+						+ " Â§ehat den Server verlassen" + " Â§c[Â§6" + Var.INGAME.size() + " Â§c/Â§6" + Game.MAXPLAYER()
+						+ "Â§c]");
 				for (Player ingame : Var.INGAME)
 					JumpLeage.getInstance().getScoreboardmanager().setScoreboardLobby(ingame);
 
@@ -57,8 +57,8 @@ public class QuitListener implements Listener {
 
 			} else if (GameStateManager.getGameState() instanceof IngameState) {
 				Var.INGAME.remove(player);
-				Bukkit.broadcastMessage(prefix + "§eDer Spieler §b" + PlayerChatColor.getColorName(player)
-						+ " §ehat das Spiel verlassen. §aEs Spielen noch §6" + Var.INGAME.size() + " §aSpieler");
+				Bukkit.broadcastMessage(prefix + "Â§eDer Spieler Â§b" + PlayerChatColor.getColorName(player)
+						+ " Â§ehat das Spiel verlassen. Â§aEs Spielen noch Â§6" + Var.INGAME.size() + " Â§aSpieler");
 				GameState.checkWinning();
 			} else {
 				GameState.checkWinning();

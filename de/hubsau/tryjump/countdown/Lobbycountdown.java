@@ -30,9 +30,9 @@ public class Lobbycountdown extends CountDown {
 
 				for (Player online : Bukkit.getOnlinePlayers()) {
 					if (seconds != 1) {
-						ActionBarAPI.sendActionBar(online, "§7Das Spiel beginnt in §b§l" + seconds + "§r§7 Sekunden");
+						ActionBarAPI.sendActionBar(online, "Â§7Das Spiel beginnt in Â§bÂ§l" + seconds + "Â§rÂ§7 Sekunden");
 					} else
-						ActionBarAPI.sendActionBar(online, "§7Das Spiel beginnt in §b§l" + seconds + "§r§7 Sekunde");
+						ActionBarAPI.sendActionBar(online, "Â§7Das Spiel beginnt in Â§bÂ§l" + seconds + "Â§rÂ§7 Sekunde");
 
 				}
 
@@ -43,20 +43,20 @@ public class Lobbycountdown extends CountDown {
 				case 15:
 				case 5:
 				case 4:
-					Bukkit.broadcastMessage(prefix + "§7Das Spiel beginnt in §f" + seconds + "§7 Sekunden");
+					Bukkit.broadcastMessage(prefix + "Â§7Das Spiel beginnt in Â§f" + seconds + "Â§7 Sekunden");
 					for (Player online : Bukkit.getOnlinePlayers())
 						online.playSound(online.getLocation(), Sound.ENDERMAN_TELEPORT, 3.0F, 0.5F);
 
 					break;
 				case 3:
 				case 2:
-					Bukkit.broadcastMessage(prefix + "§7Das Spiel beginnt in §f" + seconds + "§7 Sekunden");
+					Bukkit.broadcastMessage(prefix + "Â§7Das Spiel beginnt in Â§f" + seconds + "Â§7 Sekunden");
 					for (Player online : Bukkit.getOnlinePlayers())
 						online.playSound(online.getLocation(), Sound.ITEM_BREAK, 3.0F, 0.5F);
 
 					break;
 				case 1:
-					Bukkit.broadcastMessage(prefix + "§7Das Spiel beginnt in §f" + seconds + "§7 Sekunde");
+					Bukkit.broadcastMessage(prefix + "Â§7Das Spiel beginnt in Â§f" + seconds + "Â§7 Sekunde");
 					for (Player online : Bukkit.getOnlinePlayers())
 						online.playSound(online.getLocation(), Sound.NOTE_PLING, 3.0F, 0.5F);
 
@@ -121,11 +121,11 @@ public class Lobbycountdown extends CountDown {
 				for (Player online : Bukkit.getOnlinePlayers()) {
 
 					if (waitngplayers > 1) {
-						ActionBarAPI.sendActionBar(online, "§bZum Spielstart fehlen noch §6" + waitngplayers
-								+ " §bvon maximal §e" + Game.MAXPLAYER() + "§b Spielern");
+						ActionBarAPI.sendActionBar(online, "Â§bZum Spielstart fehlen noch Â§6" + waitngplayers
+								+ " Â§bvon maximal Â§e" + Game.MAXPLAYER() + "Â§b Spielern");
 					} else
-						ActionBarAPI.sendActionBar(online, "§bZum Spielstart fehlt noch §6" + "einer"
-								+ " §bvon maximal §e" + Game.MAXPLAYER() + "§b Spielern");
+						ActionBarAPI.sendActionBar(online, "Â§bZum Spielstart fehlt noch Â§6" + "einer"
+								+ " Â§bvon maximal Â§e" + Game.MAXPLAYER() + "Â§b Spielern");
 
 				}
 

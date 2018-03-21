@@ -18,10 +18,10 @@ public class ChatListener implements Listener {
 		if (Var.INGAME.contains(event.getPlayer())) {
 
 			if (GameStateManager.getGameState() instanceof LobbyState) {
-				event.setFormat(PlayerChatColor.getColorName(event.getPlayer()) + "ง8 ป ง7" + event.getMessage());
+				event.setFormat(PlayerChatColor.getColorName(event.getPlayer()) + "ยง8 ยง ยง7" + event.getMessage());
 
 			} else
-				event.setFormat("งe" + event.getPlayer().getName() + "ง8 ป ง7" + event.getMessage());
+				event.setFormat("ยงe" + event.getPlayer().getName() + "ยง8 ยง ยง7" + event.getMessage());
 
 		} else {
 			if (Var.SPECTATOR.contains(event.getPlayer())) {
@@ -29,7 +29,7 @@ public class ChatListener implements Listener {
 				for (Player spectator : Var.SPECTATOR) {
 
 					spectator.sendMessage(
-							"ง7[ง3Spectatorง7] ง8" + event.getPlayer().getName() + "ง8 ป ง7" + event.getMessage());
+							"ยง7[ยง3Spectatorยง7] ยง8" + event.getPlayer().getName() + "ยง8 ยง ยง7" + event.getMessage());
 				}
 			}
 

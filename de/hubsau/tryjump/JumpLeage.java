@@ -47,10 +47,16 @@ public class JumpLeage extends JavaPlugin {
 
 		new GameStateManager();
 
+
+
+
+
 		scoreboardmanager = new ScoreboardManager();
 
 		this.getCommand("setup").setExecutor(new SetupCommand());
 		this.getCommand("start").setExecutor(new StartCommand());
+
+
 
 		setCommandExecuter(this);
 		registerListeners(this);
@@ -64,7 +70,15 @@ public class JumpLeage extends JavaPlugin {
 
 		Game.crateSpecatorInv();
 
+
+
+
+
 	}
+
+
+
+
 
 	@Override
 	public void onLoad() {

@@ -36,8 +36,8 @@ public class SpectatorListener implements Listener {
 				incamera.add(event.getPlayer());
 
 				event.getPlayer().sendMessage(JumpLeage.getInstance().getPrefix()
-						+ "§aDu bist jetz in der Spielersicht von §6" + event.getRightClicked().getName());
-				event.getPlayer().sendMessage(JumpLeage.getInstance().getPrefix() + "§3Verlassen mit §eSHIFT");
+						+ "Â§aDu bist jetz in der Spielersicht von Â§6" + event.getRightClicked().getName());
+				event.getPlayer().sendMessage(JumpLeage.getInstance().getPrefix() + "Â§3Verlassen mit Â§eSHIFT");
 			}
 		}
 	}
@@ -49,7 +49,7 @@ public class SpectatorListener implements Listener {
 
 			Game.removeCamera(event.getPlayer());
 			incamera.remove(event.getPlayer());
-			event.getPlayer().sendMessage(JumpLeage.getInstance().getPrefix() + "§aDu hast die Spielersicht verlassen");
+			event.getPlayer().sendMessage(JumpLeage.getInstance().getPrefix() + "Â§aDu hast die Spielersicht verlassen");
 
 		}
 	}
@@ -61,7 +61,7 @@ public class SpectatorListener implements Listener {
 
 			if (Var.SPECTATOR.contains(event.getPlayer())) {
 				if (event.getPlayer().getItemInHand()
-						.equals(new ItemBuilder(Material.WATCH).name("§3Teleporter §7(Rechtsklick)").build())) {
+						.equals(new ItemBuilder(Material.WATCH).name("Â§3Teleporter Â§7(Rechtsklick)").build())) {
 
 					event.getPlayer().openInventory(Game.getInventory());
 
@@ -70,7 +70,7 @@ public class SpectatorListener implements Listener {
 					for (int i = 0; i < Var.INGAME.size(); i++) {
 
 						im.setOwner(Var.INGAME.get(i).getName());
-						im.setDisplayName("§7" + Var.INGAME.get(i).getName());
+						im.setDisplayName("Â§7" + Var.INGAME.get(i).getName());
 						skull.setItemMeta(im);
 					}
 
@@ -100,7 +100,7 @@ public class SpectatorListener implements Listener {
 
 		Player klicker = (Player) event.getWhoClicked();
 
-		if (event.getInventory().getName().equals("§eTeleporter")) {
+		if (event.getInventory().getName().equals("Â§eTeleporter")) {
 
 			ItemStack klicked = event.getCurrentItem();
 			SkullMeta meta = (SkullMeta) klicked.getItemMeta();
@@ -113,12 +113,12 @@ public class SpectatorListener implements Listener {
 
 				} else {
 					klicker.sendMessage(
-							JumpLeage.getInstance().getPrefix() + "§3" + meta.getOwner() + " §cist bereits gestorben!");
+							JumpLeage.getInstance().getPrefix() + "Â§3" + meta.getOwner() + " Â§cist bereits gestorben!");
 				}
 
 			} else {
 				klicker.sendMessage(
-						JumpLeage.getInstance().getPrefix() + "§3" + meta.getOwner() + " §cist nicht mehr online!");
+						JumpLeage.getInstance().getPrefix() + "Â§3" + meta.getOwner() + " Â§cist nicht mehr online!");
 			}
 
 		}

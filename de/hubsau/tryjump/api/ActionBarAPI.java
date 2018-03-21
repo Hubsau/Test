@@ -21,6 +21,8 @@ public class ActionBarAPI {
 	      String s = ChatColor.translateAlternateColorCodes('&', NachrichtNeu);
 	      IChatBaseComponent icbc = ChatSerializer.a("{\"text\": \"" + s +
 	        "\"}");
+
+
 	      PacketPlayOutChat bar = new PacketPlayOutChat(icbc, (byte)2);
 	      ((CraftPlayer)player).getHandle().playerConnection.sendPacket(bar);
 	    }

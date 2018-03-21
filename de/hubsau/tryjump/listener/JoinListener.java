@@ -33,6 +33,9 @@ public class JoinListener implements Listener {
 			MySQLStats.register(player);
 
 		}
+		
+		
+		
 		// MySQLStats.addDeaths(player.getUniqueId(), 10);
 		// }
 

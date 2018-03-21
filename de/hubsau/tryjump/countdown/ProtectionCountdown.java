@@ -52,31 +52,31 @@ public class ProtectionCountdown extends CountDown {
 				switch (seconds) {
 				case 5:
 					for (Player online : Bukkit.getOnlinePlayers()) {
-						online.sendTitle("ง4" + seconds, "");
+						online.sendTitle("ยง4" + seconds, "");
 					}
 
 					break;
 				case 4:
 					for (Player online : Bukkit.getOnlinePlayers()) {
-						online.sendTitle("งc" + seconds, "");
+						online.sendTitle("ยงc" + seconds, "");
 					}
 
 					break;
 				case 3:
 					for (Player online : Bukkit.getOnlinePlayers()) {
-						online.sendTitle("ง6" + seconds, "");
+						online.sendTitle("ยง6" + seconds, "");
 					}
 
 					break;
 				case 2:
 					for (Player online : Bukkit.getOnlinePlayers()) {
-						online.sendTitle("ง2" + seconds, "");
+						online.sendTitle("ยง2" + seconds, "");
 					}
 
 					break;
 				case 1:
 					for (Player online : Bukkit.getOnlinePlayers()) {
-						online.sendTitle("งa" + seconds, "");
+						online.sendTitle("ยงa" + seconds, "");
 					}
 
 					break;

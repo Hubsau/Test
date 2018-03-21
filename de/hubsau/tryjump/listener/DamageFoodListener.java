@@ -49,17 +49,17 @@ public class DamageFoodListener implements Listener {
 								switch (failed) {
 
 								case 0:
-									player.sendTitle("ง4", "ง4งlX งrง7งlX X");
+									player.sendTitle("ยง4", "ยง4ยงlX ยงrยง7ยงlX X");
 
 									break;
 
 								case 1:
-									player.sendTitle("ง4", "ง4งlX ง4งlX งrง7งlX");
+									player.sendTitle("ยง4", "ยง4ยงlX ยง4ยงlX ยงrยง7ยงlX");
 									player.getInventory().addItem(new ItemStack(Material.WOOL, 1, (short) 5));
 
 									break;
 								case 2:
-									player.sendTitle("ง4", "ง4งlX X X");
+									player.sendTitle("ยง4", "ยง4ยงlX X X");
 									player.getInventory().addItem(new ItemStack(Material.WOOL, 1, (short) 5));
 
 									break;

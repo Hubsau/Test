@@ -30,10 +30,10 @@ public abstract class GameState {
 
 					Player player = Var.INGAME.get(0);
 					Bukkit.broadcastMessage("");
-					Bukkit.broadcastMessage(prefix + "§2Der Spieler §e" + PlayerChatColor.getColorName(player)
-							+ " §2hat das Spiel gewonnen");
+					Bukkit.broadcastMessage(prefix + "Â§2Der Spieler Â§e" + PlayerChatColor.getColorName(player)
+							+ " Â§2hat das Spiel gewonnen");
 					Bukkit.broadcastMessage("");
-					player.sendTitle("§k12§r§2Du hast das Spiel gewonnen", "");
+					player.sendTitle("Â§k12Â§rÂ§2Du hast das Spiel gewonnen", "");
 
 					MySQLStats.addWin(UUIDFatcher.getUUID(player.getName()));
 
@@ -64,7 +64,7 @@ public abstract class GameState {
 						Player player = Var.INGAME.get(0);
 
 						player.sendMessage(
-								prefix + "§aDa du der letze Spielenede Spieler bist stopt der Server in 10 Sekunden");
+								prefix + "Â§aDa du der letze Spielenede Spieler bist stopt der Server in 10 Sekunden");
 						EndCountdown coutdown = new EndCountdown();
 						coutdown.setSeconds(10);
 						coutdown.start();

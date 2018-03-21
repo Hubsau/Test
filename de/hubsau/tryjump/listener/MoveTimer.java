@@ -61,8 +61,8 @@ public class MoveTimer extends BukkitRunnable {
 					String modulename = Var.LOCATIONSCFG.getString("checks." + lastcheckid + ".name");
 					String moduledifficulty = Var.LOCATIONSCFG.getString("checks." + lastcheckid + ".difficulty");
 
-					ActionBarAPI.sendActionBar(player, "§bName§7:§e§l " + modulename.toUpperCase()
-							+ " §bSchwierigkeit§7:§e§l " + moduledifficulty.toUpperCase());
+					ActionBarAPI.sendActionBar(player, "Â§bNameÂ§7:Â§eÂ§l " + modulename.toUpperCase()
+							+ " Â§bSchwierigkeitÂ§7:Â§eÂ§l " + moduledifficulty.toUpperCase());
 
 				}
 
@@ -105,7 +105,7 @@ public class MoveTimer extends BukkitRunnable {
 							//
 							// if (module > 0)
 							// player.sendMessage(
-							// JumpLeage.getInstance().getPrefix() + "§6Checkpoint erreicht!");
+							// JumpLeage.getInstance().getPrefix() + "Â§6Checkpoint erreicht!");
 							// module++;
 							// failed = 0;
 							//
@@ -124,13 +124,13 @@ public class MoveTimer extends BukkitRunnable {
 							// if (!Var.SUCESSED.contains(player)) {
 							// player.playSound(player.getLocation(), Sound.FIREWORK_LAUNCH, 3.0F,
 							// 0.5F);
-							// player.sendTitle("§6Du bist am Ziel angekommen", "§3");
+							// player.sendTitle("Â§6Du bist am Ziel angekommen", "Â§3");
 							// Bukkit.broadcastMessage("");
 							// Bukkit.broadcastMessage("");
 							// Bukkit.broadcastMessage(JumpLeage.getInstance().getPrefix()
 							//
-							// + " §aDer Spieler " + PlayerChatColor.getColorName(player)
-							// + " §ahat das Ziel errreicht!");
+							// + " Â§aDer Spieler " + PlayerChatColor.getColorName(player)
+							// + " Â§ahat das Ziel errreicht!");
 							// Bukkit.broadcastMessage("");
 							// Bukkit.broadcastMessage("");
 							//
@@ -173,7 +173,7 @@ public class MoveTimer extends BukkitRunnable {
 		if (!Var.CHECKEDBLOCKS.contains(player.getLocation().getBlock())) {
 			if (module > 0)
 				player.sendMessage(
-						JumpLeage.getInstance().getPrefix() + "§6Checkpoint erreicht!");
+						JumpLeage.getInstance().getPrefix() + "Â§6Checkpoint erreicht!");
 			module++;
 			failed = 0;
 
@@ -192,14 +192,14 @@ public class MoveTimer extends BukkitRunnable {
 			} catch (Exception e1) {
 
 				if (!Var.SUCESSED.contains(player)) {
-					// player.sendMessage("§6Du bist am Ziel angekommen");
+					// player.sendMessage("Â§6Du bist am Ziel angekommen");
 					player.playSound(player.getLocation(), Sound.FIREWORK_LAUNCH, 3.0F, 0.5F);
-					player.sendTitle("§6Du bist am Ziel angekommen", "§3");
+					player.sendTitle("Â§6Du bist am Ziel angekommen", "Â§3");
 					Bukkit.broadcastMessage("");
 					Bukkit.broadcastMessage("");
 					Bukkit.broadcastMessage(JumpLeage.getInstance().getPrefix()
-							+ " §aDer Spieler " + PlayerChatColor.getColorName(player)
-							+ " §ahat das Ziel errreicht!");
+							+ " Â§aDer Spieler " + PlayerChatColor.getColorName(player)
+							+ " Â§ahat das Ziel errreicht!");
 					Bukkit.broadcastMessage("");
 					Bukkit.broadcastMessage("");
 

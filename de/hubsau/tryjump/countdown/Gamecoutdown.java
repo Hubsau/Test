@@ -24,48 +24,48 @@ public class Gamecoutdown extends CountDown {
 				if (seconds == 1200) {
 
 					Bukkit.broadcastMessage(
-							JumpLeage.getInstance().getPrefix() + "§cDas Spiel endet in §620§c Minuten");
+							JumpLeage.getInstance().getPrefix() + "?cDas Spiel endet in Â§620Â§c Minuten");
 
 				}
 
 				if (seconds == 600) {
 
 					Bukkit.broadcastMessage(
-							JumpLeage.getInstance().getPrefix() + "§cDas Spiel endet in §610§c Minuten");
+							JumpLeage.getInstance().getPrefix() + "?cDas Spiel endet in Â§610Â§c Minuten");
 
 				}
 
 				if (seconds == 300) {
 
-					Bukkit.broadcastMessage(JumpLeage.getInstance().getPrefix() + "§cDas Spiel endet in §65§c Minuten");
+					Bukkit.broadcastMessage(JumpLeage.getInstance().getPrefix() + "?cDas Spiel endet in ?65?c Minuten");
 
 				}
 				if (seconds == 240) {
 
-					Bukkit.broadcastMessage(JumpLeage.getInstance().getPrefix() + "§cDas Spiel endet in §64§c Minuten");
+					Bukkit.broadcastMessage(JumpLeage.getInstance().getPrefix() + "?cDas Spiel endet in ?64?c Minuten");
 
 				}
 				if (seconds == 180) {
 
-					Bukkit.broadcastMessage(JumpLeage.getInstance().getPrefix() + "§cDas Spiel endet in §63§c Minuten");
+					Bukkit.broadcastMessage(JumpLeage.getInstance().getPrefix() + "?cDas Spiel endet in ?63?c Minuten");
 
 				}
 				if (seconds == 120) {
 
-					Bukkit.broadcastMessage(JumpLeage.getInstance().getPrefix() + "§cDas Spiel endet in §62§c Minuten");
+					Bukkit.broadcastMessage(JumpLeage.getInstance().getPrefix() + "?cDas Spiel endet in ?62?c Minuten");
 
 				}
 				if (seconds == 60) {
 
 					Bukkit.broadcastMessage(
-							JumpLeage.getInstance().getPrefix() + "§cDas Spiel endet in §6einer§c Minute");
+							JumpLeage.getInstance().getPrefix() + "?cDas Spiel endet in ?6einer?c Minute");
 
 				}
 
 				if (seconds == 0) {
 
 					stop();
-					Bukkit.broadcastMessage(JumpLeage.getInstance().getPrefix() + "§cDas Spiel endet jetzt!");
+					Bukkit.broadcastMessage(JumpLeage.getInstance().getPrefix() + "?cDas Spiel endet jetzt!");
 					GameStateManager.getGameState().end();
 
 				}

@@ -1,5 +1,7 @@
 package de.hubsau.tryjump.listener;
 
+import de.hubsau.tryjump.gamestate.IngameState;
+import de.hubsau.tryjump.util.DeathCounter;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -30,6 +32,7 @@ public class DeathListener implements Listener {
 		event.setDeathMessage(null);
 
 		if (GameStateManager.getGameState() instanceof EndFightState) {
+            EndFightState ingameState = (EndFightState)GameStateManager.getGameState();
 			Player death = event.getEntity();
 
 			if (event.getEntity() instanceof Player) {
@@ -47,34 +50,19 @@ public class DeathListener implements Listener {
 							Var.KILLS.put(UUIDFatcher.getUUID(killer.getName()), kills);
 
 						}
-						Var.KILLER.put(death, killer);
 
-						Var.DIE.add(UUIDFatcher.getUUID(death.getName()));
 
-						JumpLeage.getInstance().getScoreboardmanager().setScreboardDeatch(death);
-						JumpLeage.getInstance().getScoreboardmanager().setScreboardDeatchMatch(killer);
-						Bukkit.broadcastMessage(prefix + "§aDer Spieler §6" + death.getDisplayName() + " §awurde von §3"
-								+ killer.getDisplayName() + " §agetötet!");
-						Var.INGAME.remove(death);
-						GameState.checkWinning();
-						Var.SPECTATOR.add(death);
-						for (Player ingame : Var.INGAME)
-							ingame.hidePlayer(death);
-						death.setPlayerListName("§7Specatator: §8" + death.getName());
+
+						DeathCounter deathCounter = ingameState.getDeathCoutDown(death);
+						deathCounter.addDeath(death, killer, prefix);
 						respawnPlayer(death);
 
 					
 					}
 
 				} else {
-					JumpLeage.getInstance().getScoreboardmanager().setScreboardDeatch(death);
-
-					Bukkit.broadcastMessage(prefix + "§aDer Spieler §6" + death.getDisplayName() + " §aist gestorben!");
-
-					Var.INGAME.remove(death);
-					GameState.checkWinning();
-					Var.SPECTATOR.add(death);
-					Var.DIE.add(UUIDFatcher.getUUID(death.getName()));
+                    DeathCounter deathCounter = ingameState.getDeathCoutDown(death);
+                    deathCounter.addDeath(death, prefix);
 					respawnPlayer(death);
 
 					

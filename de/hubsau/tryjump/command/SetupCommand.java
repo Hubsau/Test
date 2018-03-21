@@ -1,13 +1,16 @@
 package de.hubsau.tryjump.command;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.enchantments.Enchantment;
+import org.bukkit.entity.EnderPearl;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
 
 import de.hubsau.tryjump.JumpLeage;
 import de.hubsau.tryjump.Var;
@@ -181,6 +184,40 @@ public class SetupCommand implements CommandExecutor {
 					Game.sendToLobbyServer(player);
 
 					break;
+				case "setchest":
+					int selten =0;
+					
+					
+					try {
+					selten = Integer.parseInt(args[1]);
+
+					}catch (Exception e) {
+					}
+					
+					
+					Var.CONFIGCFG.set("inventory."+selten, player.getInventory().getContents());
+					try {
+						Var.CONFIGCFG.save(Var.CONFIGFILE);
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+					break;
+					
+//				case "getchest":
+//					
+//					ArrayList<ItemStack> contenst = (ArrayList<ItemStack>) Var.CONFIGCFG.get("inventory.1");
+//					
+//					ItemStack[] contenstsarray = contenst.toArray(new ItemStack[contenst.size()]);
+//					
+//					
+////					ItemStack[] inv = Var.CONFIGCFG.get("inventory.1");
+//					
+//					
+//					player.getInventory().setContents(contenstsarray);
+//					
+//					
+//					
+//					break;
 				default:
 					sendHelpMessage(player);
 					break;
@@ -207,7 +244,6 @@ public class SetupCommand implements CommandExecutor {
 		player.sendMessage("§3█§b/setup setmin <Zahl> §7: §8Setze die Minimalen Spieler zum Start");
 		player.sendMessage("§3█§b/setup setAmout <Zahl> §7: §8Setze die anzahl");
 		player.sendMessage("§3█§b/setup setHolo §7: §8Setze das stats Hologram");
-
 		player.sendMessage("§3█§8der gespeicherten Schematicas in den Worldedit verzeichniss");
 		player.sendMessage("§3█§b/setup giveitem: §8Gebe dir das Item um schneller Spawns ");
 		player.sendMessage("§3███████████████████████████████████████");

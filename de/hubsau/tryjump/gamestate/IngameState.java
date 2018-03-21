@@ -1,5 +1,6 @@
 package de.hubsau.tryjump.gamestate;
 
+import de.hubsau.tryjump.util.DeathCounter;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
@@ -12,7 +13,12 @@ import de.hubsau.tryjump.countdown.ProtectionCountdown;
 import de.hubsau.tryjump.countdown.WinnerCountdown;
 import de.hubsau.tryjump.util.Game;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 public class IngameState extends GameState {
+
 	ProtectionCountdown protectionCountdown;
 	WinnerCountdown winnerCountdown;
 	private Gamecoutdown gamecoutdown;
@@ -38,12 +44,17 @@ public class IngameState extends GameState {
 		for (Player specator : Var.SPECTATOR) {
 			Game.teleportPlayerToRandomPlayer(specator);
 		}
-		Bukkit.broadcastMessage(JumpLeage.getInstance().getPrefix() + "§eDer letzte überlebende gewinnt das Endfight");
+		Bukkit.broadcastMessage(JumpLeage.getInstance().getPrefix() + "Â§eDer letzte Ã¼berlebende gewinnt das Endfight");
 		for (Player ingame : Bukkit.getOnlinePlayers())
-			JumpLeage.getInstance().getScoreboardmanager().setScreboardDeatchMatch(ingame);
+            JumpLeage.getInstance().getScoreboardmanager().setScreboardDeatchMatch(ingame);
+
+
+
 	}
 
-	public Gamecoutdown getGamecoutdown() {
+
+
+    public Gamecoutdown getGamecoutdown() {
 		return gamecoutdown;
 	}
 

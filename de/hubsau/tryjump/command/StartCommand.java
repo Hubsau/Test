@@ -26,20 +26,20 @@ public class StartCommand implements CommandExecutor {
 				if (seconds >= 5) {
 					if (lobbyState.getCountdown().isRunning()) {
 						lobbyState.getCountdown().setSeconds(5);
-						player.sendMessage(prefix + "§2Du hast den Lobbycountdown beschläunigt");
+						player.sendMessage(prefix + "Â§2Du hast den Lobbycountdown beschlÂ§unigt");
 					} else {
 						player.sendMessage(prefix
-								+ "§2Du hast die Zählzeit des Lobbycountowns für diese Runde auf 5 Sekunden gesetzt");
+								+ "Â§2Du hast die ZÂ§hlzeit des Lobbycountowns fÂ§r diese Runde auf 5 Sekunden gesetzt");
 						lobbyState.getCountdown().setSeconds(5);
 
 					}
 				} else
 					player.sendMessage(
-							prefix + "§cDer Countdown kann nur beschläunigt werden wenn er über 5 Sekunden ist");
+							prefix + "Â§cDer Countdown kann nur beschlÂ§unigt werden wenn er Â§ber 5 Sekunden ist");
 
 			} else {
 				player.sendMessage(prefix
-						+ "§cDas Spiel hat bereits begonnen du kannst deswegen den Countdown auch nicht mehr beschläunigen");
+						+ "Â§cDas Spiel hat bereits begonnen du kannst deswegen den Countdown auch nicht mehr beschlÂ§unigen");
 			}
 
 		}

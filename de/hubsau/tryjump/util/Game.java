@@ -25,6 +25,9 @@ import de.hubsau.tryjump.Var;
 import de.hubsau.tryjump.api.ConfigAPI;
 import de.hubsau.tryjump.mysql.MySQLStats;
 import net.minecraft.server.v1_8_R3.PacketPlayOutCamera;
+import org.bukkit.scheduler.BukkitRunnable;
+import org.bukkit.scoreboard.Scoreboard;
+import org.bukkit.scoreboard.Team;
 
 public class Game {
 
@@ -49,7 +52,33 @@ public class Game {
 
 		Location mainspawn = ConfigAPI.getCfg("spawn.hauptspawn", Var.LOCATIONSCFG);
 		player.teleport(mainspawn);
-		player.setDisplayName("§7"+player.getName());
+
+        Scoreboard board = Bukkit.getServer().getScoreboardManager().getNewScoreboard();
+        Team team;
+        if(board.getTeam("join") == null){
+
+                team = board.registerNewTeam("join");
+                team.setPrefix("Â§7 d");
+                team.setDisplayName("Â§7");
+
+        }else {
+                team = board.getTeam("join");
+                team.setPrefix("Â§7 d");
+                team.setDisplayName("Â§7");
+
+        }
+
+        new BukkitRunnable() {
+            @SuppressWarnings("deprecation")
+            @Override
+            public void run() {
+                team.addPlayer(player);
+            }
+        }.runTaskLater(JumpLeage.getInstance(), 5);
+
+
+
+
 	}
 
 	public static void setJumpAndRun(Player player) {
@@ -59,11 +88,11 @@ public class Game {
 		ItemStack skull = new ItemStack(Material.SKULL_ITEM, 1, (byte) 3);
 		SkullMeta meta = (SkullMeta) skull.getItemMeta();
 		meta.setOwner("MHF_ArrowLeft");
-		meta.setDisplayName("§b§lZurück zum checkpoint");
+		meta.setDisplayName("Â§bÂ§lZurÃ¼ck zum checkpoint");
 		skull.setItemMeta(meta);
-		player.getInventory().setItem(4, skull);
+		player.getInventory().setItem(8, skull);
 		player.setLevel(0);
-		player.setDisplayName("§7"+player.getName());
+		player.setDisplayName("Â§7"+player.getName());
 
 
 	}
@@ -164,7 +193,7 @@ public class Game {
 
 	public static void crateSpecatorInv() {
 
-		inventory = Bukkit.createInventory(null, 9 * 6, "§eTeleporter");
+		inventory = Bukkit.createInventory(null, 9 * 6, "Â§eTeleporter");
 
 	}
 

@@ -22,7 +22,7 @@ public class WinnerCountdown extends CountDown {
 			public void run() {
 				switch (seconds) {
 				case 30:
-					Bukkit.broadcastMessage(prefix + "§aIn 30 Sekunden beginnt das Endfight, bereitet euch vor!");
+					Bukkit.broadcastMessage(prefix + "Â§aIn 30 Sekunden beginnt das Endfight, bereitet euch vor!");
 					break;
 
 				case 20:
@@ -30,11 +30,11 @@ public class WinnerCountdown extends CountDown {
 				case 5:
 				case 3:
 				case 2:
-					Bukkit.broadcastMessage(prefix + "§cAchtung die Kämpfe beginnen in §6" + seconds + "§c Sekunden");
+					Bukkit.broadcastMessage(prefix + "Â§cAchtung die KÃ¤mpfe beginnen in Â§6" + seconds + "Â§c Sekunden");
 
 					break;
 				case 1:
-					Bukkit.broadcastMessage(prefix + "§cAchtung die Kämpfe beginnen in §6" + "einer" + "§c Sekunden");
+					Bukkit.broadcastMessage(prefix + "Â§cAchtung die KÃ¤mpfe beginnen in Â§6" + "einer" + "Â§c Sekunden");
 					break;
 				case 0:
 				default:

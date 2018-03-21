@@ -52,20 +52,20 @@ public class OtherListener implements Listener {
 			if (event.getInventory().getType().equals(InventoryType.CHEST)) {
 
 				if (event.getCurrentItem().getType().equals(Material.SKULL_ITEM)) {
-					if (!event.getInventory().getName().equals("§eTeleporter")) {
+					if (!event.getInventory().getName().equals("Â§eTeleporter")) {
 						event.getWhoClicked().sendMessage(JumpLeage.getInstance().getPrefix()
-								+ "§cDu darft dieses Item nur in deiner Hotbar versetzen");
+								+ "Â§cDu darft dieses Item nur in deiner Hotbar versetzen");
 						event.setCancelled(true);
 
 					}
 				}
 			}
 			if(event.getSlot() > 8) {
-				if (!event.getInventory().getName().equals("§eTeleporter")) {
+				if (!event.getInventory().getName().equals("Â§eTeleporter")) {
 					if (event.getCurrentItem().getType().equals(Material.SKULL_ITEM)) {
 
 					event.getWhoClicked().sendMessage(JumpLeage.getInstance().getPrefix()
-							+ "§cDu darft dieses Item nur in deiner Hotbar versetzen");
+							+ "Â§cDu darft dieses Item nur in deiner Hotbar versetzen");
 					event.setCancelled(true);
 					}
 				}
@@ -82,11 +82,11 @@ public class OtherListener implements Listener {
 //
 //					if (event.getCurrentItem().getType().equals(Material.SKULL_ITEM)) {
 //
-//						if (!event.getInventory().getName().equals("§eTeleporter")) {
+//						if (!event.getInventory().getName().equals("Â§eTeleporter")) {
 //							event.setCancelled(true);
 //
 //					event.getWhoClicked().sendMessage(JumpLeage.getInstance().getPrefix()
-//							+ "§cDu darft dieses Item nur in deiner Hotbar versetzen");
+//							+ "Â§cDu darft dieses Item nur in deiner Hotbar versetzen");
 //						}
 //					}
 //					

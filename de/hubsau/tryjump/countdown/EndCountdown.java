@@ -28,13 +28,13 @@ public class EndCountdown extends CountDown {
 				case 5:
 				case 4:
 				case 3:
-					Bukkit.broadcastMessage(JumpLeage.getInstance().getPrefix() + "§cDer Server statet in §b"
-							+ (seconds - 1) + " §c Sekunden neu!");
+					Bukkit.broadcastMessage(JumpLeage.getInstance().getPrefix() + "Â§cDer Server statet in Â§b"
+							+ (seconds - 1) + " Â§c Sekunden neu!");
 
 					break;
 				case 2:
-					Bukkit.broadcastMessage(JumpLeage.getInstance().getPrefix() + "§cDer Server statet in §b"
-							+ (seconds - 1) + " §cSekunde neu!");
+					Bukkit.broadcastMessage(JumpLeage.getInstance().getPrefix() + "Â§cDer Server statet in Â§b"
+							+ (seconds - 1) + " Â§cSekunde neu!");
 
 					Game.setStatsToMySql();
 					for (Player online : Bukkit.getOnlinePlayers())

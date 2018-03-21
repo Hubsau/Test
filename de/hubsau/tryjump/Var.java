@@ -29,9 +29,9 @@ public class Var {
 	public static ArrayList<Player> SUCESSED = new ArrayList<>(); //Wenn der Spieler das Ziel erreich hat!
 	public static Map<Player, String> INSETUP = new HashMap<>(); //Wenn der Spieler Locations mit dem item setzen will
 
-	public static ArrayList<Block> CHECKEDBLOCKS = new ArrayList<>(); //Um abfragen zu können ob der Block unter den Spieler bereits ein Checkpoint war
+	public static ArrayList<Block> CHECKEDBLOCKS = new ArrayList<>(); //Um abfragen zu kÂ§nnen ob der Block unter den Spieler bereits ein Checkpoint war
 	
-	public static Map<Player, Location> LASTCHECK = new HashMap<>(); //Alle blöcke 
+	public static Map<Player, Location> LASTCHECK = new HashMap<>(); //Alle blÂ§cke
 	
 	
 	public static Map<Player, Location> STARTCHECK = new HashMap<>(); //First check +

@@ -91,7 +91,7 @@ public class ScoreboardManager {
 		
 		
 		obj.getScore("§a").setScore(200);
-		obj.getScore("§6§lVortrschritt in Prozent").setScore(199);
+		obj.getScore("§6§lFortrschritt in Prozent").setScore(199);
 		obj.getScore("§a ").setScore(198);
 //		obj.getScore("§aDas Spiel Dauert noch").setScore(198);
 		

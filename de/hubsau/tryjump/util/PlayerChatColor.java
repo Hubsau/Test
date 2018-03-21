@@ -10,80 +10,82 @@ public class PlayerChatColor {
 
 		if (PermissionsEx.getUser(player).inGroup("CoOwner") || PermissionsEx.getUser(player).inGroup("Admin")) {
 
-			return "ง4" + player.getName();
+			return "ยง4" + player.getName();
 
 		}
 		if (PermissionsEx.getUser(player).inGroup("SrDev") || PermissionsEx.getUser(player).inGroup("Dev")
 				|| PermissionsEx.getUser(player).inGroup("TestDev")) {
 
-			return "งb" + player.getName();
+			return "ยงb" + player.getName();
 
 		}
 		if (PermissionsEx.getUser(player).inGroup("Content")) {
 
-			return "ง3" + player.getName();
+			return "ยง3" + player.getName();
+
+
 
 		}
 
 		if (PermissionsEx.getUser(player).inGroup("Designer")) {
 
-			return "ง8" + player.getName();
+			return "ยง8" + player.getName();
 
 		}
 
 		if (PermissionsEx.getUser(player).inGroup("Partner")) {
 
-			return "งe" + player.getName();
+			return "ยงe" + player.getName();
 
 		}
 
 		if (PermissionsEx.getUser(player).inGroup("YT")) {
 
-			return "งd" + player.getName();
+			return "ยงd" + player.getName();
 
 		}
 		if (PermissionsEx.getUser(player).inGroup("Premiump")) {
 
-			return "ง6" + player.getName();
+			return "ยง6" + player.getName();
 
 		}
 		if (PermissionsEx.getUser(player).inGroup("Vetaran")) {
 
-			return "ง2" + player.getName();
+			return "ยง2" + player.getName();
 
 		}
 
 		if (PermissionsEx.getUser(player).inGroup("Elite")) {
 
-			return "ง1" + player.getName();
+			return "ยง1" + player.getName();
 
 		}
 
 		if (PermissionsEx.getUser(player).inGroup("StanSp")) {
 
-			return "ง8" + player.getName();
+			return "ยง8" + player.getName();
 
 		}
 
 		if (PermissionsEx.getUser(player).inGroup("Mod") || PermissionsEx.getUser(player).inGroup("SrMod")
 				|| PermissionsEx.getUser(player).inGroup("TestMod")) {
-			return "งc" + player.getName();
+			return "ยงc" + player.getName();
 
 		}
 
 		if (PermissionsEx.getUser(player).inGroup("SrBuild") || PermissionsEx.getUser(player).inGroup("Build")
 				|| PermissionsEx.getUser(player).inGroup("TestBuild")) {
 
-			return "งa" + player.getName();
+			return "ยงa" + player.getName();
 
 		}
 
 		if (PermissionsEx.getUser(player).inGroup("Sup") || PermissionsEx.getUser(player).inGroup("TestSup")) {
 
-			return "ง9" + player.getName();
+			return "ยง9" + player.getName();
 
 		} else
-			return "ง7" + player.getName();
+			return "ยง7" + player.getName();
 
 	}
 
